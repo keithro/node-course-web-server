@@ -41,6 +41,8 @@ hbs.registerHelper('screamIt', (text) => {
 // ==========
 //   ROUTES
 // ==========
+
+// HOME
 app.get('/', (req, res) => {
 	res.render('home.hbs', {
 		pageTitle: 'Home Page',
@@ -48,9 +50,17 @@ app.get('/', (req, res) => {
 	});
 });
 
+// ABOUT
 app.get('/about', (req, res) => {
 	res.render('about.hbs', {
 		pageTitle: 'About Page'
+	});
+});
+
+// PORTFOLIO
+app.get('/projects', (req, res) => {
+	res.render('projects.hbs', {
+		pageTitle: 'Portfolio Page'
 	});
 });
 
